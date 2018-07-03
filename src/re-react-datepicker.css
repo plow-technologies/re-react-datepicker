@@ -1,0 +1,23 @@
+.react-datepicker__time-container .react-datepicker__time .react-datepicker__time-box ul.react-datepicker__time-list {
+    padding-left: unset;
+    padding-right: unset;
+    /* width: 100px; */
+}
+
+
+/* .react-datepicker__input-container, .react-datepicker-wrapper { */
+/*     width: 100%; */
+/* } */
+
+/* .react-datepicker { */
+/*     width: 314px; */
+/* } */
+
+/* .react-datepicker .react-datepicker__day { */
+/*     line-height: 1.4rem; */
+/*     margin: .1rem 0.166rem; */
+/* } */
+
+/* .react-datepicker .react-datepicker__day-name { */
+/*     line-height: 1rem; */
+/* } */
