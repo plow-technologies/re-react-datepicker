@@ -1,0 +1,17 @@
+{
+  "name": "re-react-datepicker",
+  "bsc-flags": ["-bs-no-version-header", "-bs-super-errors"],
+  "package-specs": {
+    "module": "es6"
+  },
+  "bs-dependencies": [
+    "reason-react",
+    "bs-moment"
+  ],
+  "reason": {
+    "react-jsx": 2
+  },
+
+  "refmt": 3,
+  "sources": ["src"]
+}

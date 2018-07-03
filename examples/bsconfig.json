@@ -1,0 +1,10 @@
+{
+  "name": "re-react-datepicker-examples",
+  "sources": ["src"],
+  "bs-dependencies": ["reason-react", "re-react-datepicker", "bs-moment"],
+  "reason": {
+    "react-jsx": 2
+  },
+  "bsc-flags": ["-bs-super-errors"],
+  "refmt": 3
+}
