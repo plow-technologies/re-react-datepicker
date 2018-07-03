@@ -1,5 +1,5 @@
 [%bs.raw {|require('react-datepicker/dist/react-datepicker.css')|}];
-
+[%bs.raw {|require('re-react-datepicker/src/re-react-datepicker.css')|}];
 
 open MomentRe;
 
@@ -67,7 +67,6 @@ external makeProps :
     ~showYearDropdown: bool=?,
     ~shouldCloseOnSelect: bool=?,
     ~autoFocus: bool=?,
-    ~style: ReactDOMRe.Style.t,
     unit
   ) =>
   _ =
@@ -183,9 +182,6 @@ let make =
             ~showYearDropdown?,
             ~shouldCloseOnSelect?,
             ~autoFocus?,
-            ~style=(
-  ReactDOMRe.Style.make(~color="#444444", ~fontSize="68px", ())
-),
             (),
           ),
         children,
