@@ -7,6 +7,12 @@ external makeProps :
   (
     ~selected: Moment.t,
     ~onChange: Moment.t => unit,
+    ~showTimeSelect: bool=?,
+    ~dateFormat: string=?,
+    ~includeTimes: array(Moment.t)=?,
+    ~injectTimes: array(Moment.t)=?,
+    ~minTime: Moment.t=?,
+    ~maxTime: Moment.t=?,
     unit
   ) =>
   _ =
@@ -14,16 +20,21 @@ external makeProps :
 
 [@bs.module "react-datepicker"]
 external datePickerAbs : ReasonReact.reactClass = "default";
-/* external datePickerAbs : ReasonReact.reactClass = "DatePicker"; */
 
 let datePicker = ReasonReact.statelessComponent("DatePicker");
 
 let make =
-  (
-    ~selected,
-    ~onChange,
-    children,
-  ) => {
+    (
+      ~selected,
+      ~onChange,
+      ~showTimeSelect=?,
+      ~dateFormat=?,
+      ~includeTimes=?,
+      ~injectTimes=?,
+      ~minTime=?,
+      ~maxTime=?,
+      children,
+    ) => {
   ...datePicker,
   render: _self =>
     ReasonReact.element(
@@ -31,10 +42,16 @@ let make =
         ~reactClass=datePickerAbs,
         ~props=
           makeProps(
-        ~selected,
-        ~onChange,
-        ()
-      ),
+            ~selected,
+            ~onChange,
+            ~showTimeSelect?,
+            ~dateFormat?,
+            ~includeTimes?,
+            ~injectTimes?,
+            ~minTime?,
+            ~maxTime?,
+            (),
+          ),
         children,
       ),
     ),
